@@ -27,7 +27,11 @@ describe('UserInfo', () => {
 
     mount(<UserInfo user={user1} />);
 
-    cy.get('.UserInfo a').should('have.attr', 'href', 'mailto:Sincere@april.biz');
+    cy.get('.UserInfo a').should(
+      'have.attr',
+      'href',
+      'mailto:Sincere@april.biz',
+    );
   });
 
   it('should work for another user', () => {
@@ -42,7 +46,10 @@ describe('UserInfo', () => {
 
     cy.get('.UserInfo').should('contain.text', 'Ervin Howell');
     cy.get('.UserInfo').should('contain.text', 'Shanna@melissa.tv');
-    cy.get('.UserInfo a').should('have.attr', 'href', 'mailto:Shanna@melissa.tv');
+    cy.get('.UserInfo a').should(
+      'have.attr',
+      'href',
+      'mailto:Shanna@melissa.tv',
+    );
   });
 });
-

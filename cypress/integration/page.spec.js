@@ -14,10 +14,12 @@ describe('Page', () => {
 
   it('should render corresponding users', () => {
   cy.get('.UserInfo').should('have.length', 2);
+
   cy.get('.UserInfo').eq(0).should('contain.text', 'Leanne Graham');
-  cy.get('.UserInfo').eq(0).should('contain.text', 'Sincere@april.biz');
+  cy.get('.UserInfo').eq(0).find('a').should('have.attr', 'href', 'mailto:Sincere@april.biz');
 
   cy.get('.UserInfo').eq(1).should('contain.text', 'Clementine Bauch');
-  cy.get('.UserInfo').eq(1).should('contain.text', 'Nathan@yesenia.net');
+  cy.get('.UserInfo').eq(1).find('a').should('have.attr', 'href', 'mailto:Nathan@yesenia.net');
 });
 
+});

@@ -5,4 +5,3 @@ export const UserInfo = ({ user }) => (
     {user.name} <a href={`mailto:${user.email}`}>{user.email}</a>
   </div>
 );
-

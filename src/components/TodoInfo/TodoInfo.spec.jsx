@@ -82,8 +82,10 @@ describe('TodoInfo', () => {
 
       mount(<TodoInfo todo={todo48} />);
 
-      cy.get('.TodoInfo__title')
-        .should('have.text', 'sit reprehenderit omnis quia');
+      cy.get('.TodoInfo__title').should(
+        'have.text',
+        'sit reprehenderit omnis quia',
+      );
 
       cy.get('.TodoInfo').should('have.class', 'TodoInfo--completed');
       cy.get('.UserInfo').should('contain.text', 'Clementine Bauch');
@@ -93,4 +95,3 @@ describe('TodoInfo', () => {
     });
   });
 });
-
